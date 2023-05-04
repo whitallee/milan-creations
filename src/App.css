@@ -1,0 +1,406 @@
+:root {
+  --light-tan: #eef5e1;
+  --dark-green: #93bea4;
+  --light-green: #b2d4ab;
+  --light-purple: #c2a0e8;
+  --dark-purple: #66616b;
+  --lighter-dark-purple: #888688;
+  --holder: #c2a0e8;
+  --ff-title: 'Montez', 'cursive';
+  --ff-body: 'Dosis', sans-serif;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  background-color: var(--light-tan);
+  color: var(--dark-purple);
+  font-family: var(--ff-body);
+  font-size: 1.5rem;
+}
+
+.top-back {
+  background-color: var(--light-purple);
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  opacity: 60%;
+  display: none;
+}
+
+.burger {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.burger-icon {
+  height: 2rem;
+  object-fit: cover;
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  text-align: left;
+  background-color: var(--light-purple);
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  z-index: 9;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.sidenav > ul{
+  list-style: none;
+  padding: 0 2.5rem 0 3rem;
+  margin-top: 4rem;
+  line-height: 3;
+}
+
+.sidenav > ul > li > a {
+  color: var(--dark-purple);
+  transition: all 0.5s ease;
+}
+
+.sidenav > ul > li > a:hover {
+  color: var(--light-tan);
+}
+
+.dropdown {
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.dropdown:hover {
+  color: var(--light-tan);
+}
+
+.droppeddown {
+  padding-left: 1rem;
+}
+
+.droppeddown > li > a {
+  color: var(--dark-purple);
+  transition: all 0.5s ease;
+}
+
+.droppeddown > li > a:hover {
+  color: var(--light-tan);
+}
+
+.shopping-cart {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.shopping-cart > img {
+  height: 2rem;
+}
+
+.welcome {
+  font-size: 8rem;
+  font-family: var(--ff-title);
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  margin-inline: auto;
+  line-height: 1;
+  color: var(--dark-purple);
+}
+
+.showcase {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  margin-inline: 1rem;
+}
+
+.carousel-button {
+  /* justify-content: center; */
+  padding: 0;
+}
+
+.carousel-button:focus {
+  outline: none;
+}
+
+div:has(.showcase-img) {
+  border-radius: 2rem;
+}
+
+.showcase-img {
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  height: 420px;
+}
+
+.store-shortcuts {
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  width: 63%;
+  margin: auto;
+  margin-bottom: 0.75rem;
+}
+
+.store-shortcuts > a {
+  color: var(--dark-purple);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.store-shortcuts > a:hover {
+  color: var(--light-purple);
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: space-between;
+  width: 66%;
+  margin: auto;
+}
+
+.gallery {
+  width: 49%;
+  height: auto;
+  border-style: solid;
+  border-color: var(--light-purple);
+  border-radius: 2rem;
+  box-shadow: 5px 5px var(--light-purple);
+  padding-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.gallery > img {
+  height: 6rem;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-inline: 0.5rem;
+}
+
+.milan-info {
+  width: 66%;
+  margin-inline: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  border-style: solid;
+  border-color: var(--light-purple);
+  box-shadow: 5px 5px var(--light-purple);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.milan-info > p { 
+  font-size: 1rem;
+  max-width: 75ch;
+  text-align: left;
+  margin-right: 1rem;
+}
+
+.bio-pic {
+  height: 8rem;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 2rem;
+  border-style: solid;
+  border-color: var(--light-purple);
+  margin-left: 1rem;
+}
+
+.deal-container {
+  background-color: var(--lighter-dark-purple);
+  border-radius: 0 0 2rem 2rem;
+  margin: 0;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(2rem);
+}
+
+.deal {
+  color: var(--light-tan);
+  margin-right: 10rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 3.5rem;
+  padding-bottom: 1.5rem;
+  background-color: var(--dark-purple);
+  color: var(--light-tan);
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.left-column > h3 {
+  font-size: 1.25rem;
+  text-decoration: underline;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.address {
+  font-size: 1rem;
+}
+
+.right-column {
+  padding-top: 0rem;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.right-column > span > a {
+  color: var(--light-purple);
+}
+
+.right-column > a {
+  color: var(--light-purple);
+}
+
+.right-column > a:hover {
+  color: var(--light-purple);
+}
+
+.faq {
+  font-stretch: extra-expanded;
+  /* use stretchable font */
+}
+
+@media (max-width: 1250px) and (min-width: 767px) {
+  .gallery {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .gallery > img {
+    transform: translateY(-0.25rem);
+  }
+  
+  .hide-at-small {
+    display: none;
+  }
+}
+
+@media (max-width: 766.99px) {
+  .welcome {
+    font-size: 6rem;
+  }
+
+  .store-shortcuts {
+    font-size: 2rem;
+  }
+
+  .gallery:nth-child(1) {
+    margin-right: 0.5rem;
+  }
+
+  .gallery:nth-child(2) {
+    margin-left: 0.5rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .top-back {
+    display: block;
+  }
+
+  .welcome {
+    margin-top: 4.5rem;
+  }
+}
+
+@media (max-width: 515px) {
+  .burger-icon {
+    height: 1.5rem;
+  }
+
+  .shopping-cart > img {
+    height: 1.5rem;
+  }
+
+  .welcome {
+    font-size: 3.7rem;
+  }
+
+  .store-shortcuts {
+    font-size: 1.25rem;
+    width: auto;
+    margin-inline: 2rem;
+  }
+
+  .gallery-container {
+    width: auto;
+    margin: 1rem;
+  }
+
+  .milan-info {
+    width: auto;
+    margin-inline: 1rem;
+  }
+
+  .contact-info {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .right-column {
+    margin-inline: 1rem;
+    font-size: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .left-column > h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .gallery > img {
+    height: 4.5rem;
+  }
+
+  .welcome {
+    font-size: 3rem;
+  }
+}
